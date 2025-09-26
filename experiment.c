@@ -26,6 +26,6 @@ void add_noise(double *radioactivity, int n)
 {
     while (n--)
     {
-        radioactivity[n + 1] += (rand()/(RAND_MAX+1.0) - 0.5) * 2.0 * noise_ampl;
+        radioactivity[n + 1] += (rand()/(double)RAND_MAX - 0.5) * 2.0 * noise_ampl;
     }
 }
